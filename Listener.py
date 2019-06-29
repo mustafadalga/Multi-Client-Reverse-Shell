@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python 3.7.2
 # -*- coding: utf-8 -*-
 import socket
 import json
