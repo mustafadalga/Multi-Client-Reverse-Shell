@@ -15,18 +15,14 @@ ___  ___      _ _   _  ______                               _____ _          _ _
 <hr>
 
 
-:arrow_right: **setup.py** scripti ile **ReverseBackdoor** exe uzantısına çevrilerek kullanılabilir.   
-
-:arrow_right: **ReverseBackdoor.py** , exe uzantısına çevrildiğinde sadece Windows işletim sistemi için çalışacak olan **persistent** metodu &nbsp; &nbsp; &nbsp;&nbsp; sayesinde **ReverseBackdoor**'un kalıcılığı sağlanır.  
-
-:arrow_right: Böylece her işletim sistemi oturumu başladığında **ReverseBackdoor** kendini bir Windows dosyası olarak gösterip &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;çalışmaya başlar.
-
-:arrow_right: **ReverseBackdoor**'in çalıştığı hedef bilgisayar sürekli Hacker'a(**Listener**) bağlantı isteği gönderir.Hacker(**Listener**) aktif &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;olduğu anda bağlantıyı kurar.Sonuç olarak Hacker(**Listener**) , hedef bilgisayara istediği zaman bağlanabilir veya aktif &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bağlantıyı koparabilir.
-
-:arrow_right: Hedef bilgisayarlardan bağlantı istekleri geldiğinde Hacker'a(**Listener**) bildirimler gelir. 
-
-
-:arrow_right: Dosya indirme ve yükleme özellikleri ile hedef bilgisayardan dosya indirme ve yükleme işlemi gerçekleştirilebilir.
+|   | Açıklama |
+| ------------- |  ------------- | 
+| :arrow_right:  | **setup.py** scripti ile **ReverseBackdoor** exe uzantısına çevrilerek kullanılabilir.  |
+|:arrow_right: | **ReverseBackdoor.py** , exe uzantısına çevrildiğinde , sadece Windows işletim sistemi için çalışacak olan **persistent** metodu sayesinde **ReverseBackdoor**'un kalıcılığı sağlanır.  |
+|:arrow_right: | Böylece her işletim sistemi oturumu başladığında **ReverseBackdoor** kendini bir Windows dosyası olarak gösterip çalışmaya başlar. |
+|:arrow_right: | **ReverseBackdoor**'in çalıştığı hedef bilgisayar sürekli Hacker'a(**Listener**) bağlantı isteği gönderir.Hacker(**Listener**) aktif olduğu anda bağlantıyı kurar.Sonuç olarak Hacker(**Listener**) , hedef bilgisayara istediği zaman bağlanabilir veya aktif bağlantıyı koparabilir. |
+| :arrow_right: | Hedef bilgisayarlardan bağlantı istekleri geldiğinde Hacker'a(**Listener**) bildirimler gelir. |
+| :arrow_right: | Dosya indirme ve yükleme özellikleri ile hedef bilgisayardan dosya indirme ve yükleme işlemi gerçekleştirilebilir. |
 
 
 
