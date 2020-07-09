@@ -87,15 +87,17 @@ python3 ReverseBackdoor.py
 ```
 
 
-#### Kullanım komutları
-* **help** : Uygulama kullanımı hakkında bilgi verir.
-* **list** : Bağlantı sağlayan hedef bilgisayarları listeler.
-* **select** : Bağlantı sağlayan bilgisayarları seçmek için kullanılır.Seçim işlemi listelenen bilgisayarların index numaralarına göre yapılır.
-* **quit** : Üzerinde işlem yapılan aktif hedef bilgisayardan bağlantıyı durdurmak için kullanılır.
-* **exit** : Serverin çalışmasını durdurur.Uygulamadan çıkış yapar.
-* **upload** : Seçilen hedef makineye dosya yüklenmesini sağlar.Hedef bilgisayar seçildikten sonra bu komut çalışır.
-* **download** : Seçilen hedef makineden dosya indirilmesini sağlar.Hedef bilgisayar seçildikten sonra bu komut çalışır.
+#### Kullanım Komutları
 
+|   | Kullanım Komutları |
+| ------------- |  ------------- | 
+| **help**  | Uygulama kullanımı hakkında bilgi verir. |
+| **list**  | Bağlantı sağlayan hedef bilgisayarları listeler. |
+| **select**   | Bağlantı sağlayan bilgisayarları seçmek için kullanılır.Seçim işlemi listelenen bilgisayarların index numaralarına göre yapılır. |
+| **quit**  | Üzerinde işlem yapılan aktif hedef bilgisayardan bağlantıyı durdurmak için kullanılır. |
+| **exit**  | Serverin çalışmasını durdurur.Uygulamadan çıkış yapar. |
+| **upload**  | Seçilen hedef makineye dosya yüklenmesini sağlar.Hedef bilgisayar seçildikten sonra bu komut çalışır. |
+| **download**   | Seçilen hedef makineden dosya indirilmesini sağlar.Hedef bilgisayar seçildikten sonra bu komut çalışır. |
 
 
 #### Notlar
