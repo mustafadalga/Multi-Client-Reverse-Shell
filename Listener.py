@@ -310,7 +310,6 @@ class Listener:
         print(self.uyari_renk(" |_|  \_\___| \_/ \___|_|  |___/\___| |_____/|_| |_|\___|_|_|", 1))
         print(self.uyari_renk("# ==============================================================================",1))
         print(self.uyari_renk("# author      	:", 1) + "Mustafa Dalga")
-        print(self.uyari_renk("# website    	:", 1) + "https://apierson.com")
         print(self.uyari_renk("# linkedin    	:", 1) + "https://www.linkedin.com/in/mustafadalga")
         print(self.uyari_renk("# github      	:", 1) + "https://github.com/mustafadalga")
         print(self.uyari_renk("# email      	:", 1) + "mustafadalgaa < at > gmail[.]com")
