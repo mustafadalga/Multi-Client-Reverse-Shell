@@ -9,111 +9,110 @@ ___  ___      _ _   _  ______                               _____ _          _ _
                                                                                  
 ```
 
-## Açıklama
-**Hedef bilgisayarlardan gelen birden fazla bağlantıya izin veren çoklu istemcili reverse shell.**
+## Description
+**A multi-client reverse shell allowing multiple connections from target computers.**
 
 <hr>
 
 
-|   | Açıklama |
-| ------------- |  ------------- | 
-| :arrow_right:  | **setup.py** scripti ile **ReverseBackdoor** exe uzantısına çevrilerek kullanılabilir.  |
-|:arrow_right: | **ReverseBackdoor.py** , exe uzantısına çevrildiğinde , sadece Windows işletim sistemi için çalışacak olan **persistent** metodu sayesinde **ReverseBackdoor**'un kalıcılığı sağlanır.  |
-|:arrow_right: | Böylece her işletim sistemi oturumu başladığında **ReverseBackdoor** kendini bir Windows dosyası olarak gösterip çalışmaya başlar. |
-|:arrow_right: | **ReverseBackdoor**'in çalıştığı hedef bilgisayar sürekli Hacker'a(**Listener**) bağlantı isteği gönderir.Hacker(**Listener**) aktif olduğu anda bağlantıyı kurar.Sonuç olarak Hacker(**Listener**) , hedef bilgisayara istediği zaman bağlanabilir veya aktif bağlantıyı koparabilir. |
-| :arrow_right: | Hedef bilgisayarlardan bağlantı istekleri geldiğinde Hacker'a(**Listener**) bildirimler gelir. |
-| :arrow_right: | Dosya indirme ve yükleme özellikleri ile hedef bilgisayardan dosya indirme ve yükleme işlemi gerçekleştirilebilir. |
+| | Description |
+| ------------- | ------------- |
+| :arrow_right: | Can be used by converting the **ReverseBackdoor** script to an exe extension using the **setup.py** script. |
+| :arrow_right: | When **ReverseBackdoor.py** is converted to an exe, the persistence of **ReverseBackdoor** is ensured for Windows operating system only, thanks to the **persistent** method. |
+| :arrow_right: | Thus, every time an operating system session starts, **ReverseBackdoor** disguises itself as a Windows file and begins to run. |
+| :arrow_right: | The target computer where **ReverseBackdoor** is running continuously sends connection requests to the Hacker (**Listener**). The Hacker (**Listener**) establishes the connection as soon as it becomes active. As a result, the Hacker (**Listener**) can connect to the target computer at any time or disconnect the active connection. |
+| :arrow_right: | Notifications are sent to the Hacker (**Listener**) when connection requests come from target computers. |
+| :arrow_right: | File download and upload features allow for downloading and uploading files from/to the target computer. |
 
 
 
 
+### Installation
+**Module to install to run ReverseShell and Listener scripts**
 
-### Kurulum
-**ReverseShell ve Listener scriptlerini çalıştırabilmek için kurulacak modül**
-
-* Linux için kurulum 
+* For Linux installation
 
 ```
 python3 -m pip install termcolor==1.1.0
 ```
 
-* Windows için kurulum 
+* For Windows installation
 
 ```
 python -m pip install termcolor==1.1.0
 ```
 
-**ReverseBackdoor.py'i exe uzantısına çevirmek için kullanılan setup.py'i kullanabilmek için kurulacak modül** 
+**Module to install to use setup.py to convert ReverseBackdoor.py to exe extension**
 
-* Linux için kurulum 
+* For Linux installation
 
 ```
 python3 -m pip install PyInstaller==3.4
 ```
 
-* Windows için kurulum 
+* For Windows installation
 
 ```
 python -m pip install PyInstaller==3.4
 ```
 
 
-### Kullanım
-**Listener kullanımı** 
+### Usage
+**Listener usage**
 
-* Linux için kullanım 
+* For Linux usage
 
 ```
 python3 Listener.py
 ```
 
-* Windows için kullanım 
+* For Windows usage
 
 ```
  python Listener.py
 ```
 
-**ReverseBackdoor.py'in script olarak kullanımı** 
+**ReverseBackdoor.py script usage**
 
-* Linux için kullanım 
+* For Linux usage
 ```
 python3 ReverseBackdoor.py
 ```
 
-* Windows için kullanım 
+* For Windows usage
 
 ```
  python ReverseBackdoor.py
 ```
 
 
-#### Kullanım Komutları
+#### Usage Commands
 
-|   | Kullanım Komutları |
-| ------------- |  ------------- | 
-| **help**  | Uygulama kullanımı hakkında bilgi verir. |
-| **list**  | Bağlantı sağlayan hedef bilgisayarları listeler. |
-| **select**   | Bağlantı sağlayan bilgisayarları seçmek için kullanılır.Seçim işlemi listelenen bilgisayarların index numaralarına göre yapılır. |
-| **quit**  | Üzerinde işlem yapılan aktif hedef bilgisayardan bağlantıyı durdurmak için kullanılır. |
-| **exit**  | Serverin çalışmasını durdurur.Uygulamadan çıkış yapar. |
-| **upload**  | Seçilen hedef makineye dosya yüklenmesini sağlar.Hedef bilgisayar seçildikten sonra bu komut çalışır. |
-| **download**   | Seçilen hedef makineden dosya indirilmesini sağlar.Hedef bilgisayar seçildikten sonra bu komut çalışır. |
-
-
-#### Notlar
-* Scriptler hem Linux hem de Windows işletim sistemlerinde çalışmaktadır.
-* Python versiyonu:3.7.2
-* setup scriptinde **cx_Freeze** modülünü kullanarak ReverseBackdoor'u exe'ye dönüştürmememin sebebi , persistent modülü ile kalıcılık sağlanmak için appdata klasörüne kopyalanan ReverseBackdoor'u çalışmamasıdır.Alternatif olarak **pyinstaller** modülü ile exe'ye dönüştürme işlemini gerçekleştirdim.
-* **setup.py** dosyası , ReverseBackdoor'u exe uzantısına dönüştürürken subprocess  ile pyinstaller exe'ye dönüştürme komutu kullanılarak yapılmaktadır.pyinstaller modülünün çalışması içinde, pyinstall modülü yolunun Windows Path'lerin içerisine eklenmiş olması gerekmektedir.
-* Daha fazla bilgi için aşağıdaki 2 linki inceleyebilirsiniz:  
-    1-)[Add Python to the Windows Path](https://geek-university.com/python/add-python-to-the-windows-path)  
-    2-)[How to add to the PYTHONPATH in Windows, so it finds my modules/packages?](https://stackoverflow.com/questions/3701646/how-to-add-to-the-pythonpath-in-windows-so-it-finds-my-modules-packages)
+| | Usage Commands |
+| ------------- | ------------- |
+| **help** | Provides information about application usage. |
+| **list** | Lists connected target computers. |
+| **select** | Used to select connected computers. Selection is made according to the index numbers of the listed computers. |
+| **quit** | Used to stop the connection from the active target computer being operated on. |
+| **exit** | Stops the server from running. Exits the application. |
+| **upload** | Enables uploading files to the selected target machine. This command runs after the target computer is selected. |
+| **download** | Enables downloading files from the selected target machine. This command runs after the target computer is selected. |
 
 
+#### Notes
+* The scripts work on both Linux and Windows operating systems.
+* Python version: 3.7.2
+* The reason I did not convert ReverseBackdoor to exe using the **cx_Freeze** module in the setup script is that the ReverseBackdoor copied to the appdata folder for persistence with the persistent module does not run. Alternatively, I performed the conversion to exe with the **pyinstaller** module.
+* The **setup.py** file converts ReverseBackdoor to an exe extension by using the pyinstaller exe conversion command with subprocess. For the pyinstaller module to work, the path to the pyinstaller module must be added to the Windows Paths.
+* For more information, you can check the following 2 links:
+    - [Add Python to the Windows Path](https://geek-university.com/python/add-python-to-the-windows-path)
+    - [How to add to the PYTHONPATH in Windows, so it finds my modules/packages?](https://stackoverflow.com/questions/3701646/how-to-add-to-the-pythonpath-in-windows-so-it-finds-my-modules-packages)
 
 
 
-### (Hacker) Listener Görüntüleri - Kali linux işletim sistemi üzerinde
+
+
+### (Hacker) Listener Screenshots - On Kali Linux operating system
 ![3](https://user-images.githubusercontent.com/25087769/60386240-4503dc00-9a9b-11e9-86ea-c3d38383258f.PNG)
 
 
